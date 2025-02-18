@@ -8,13 +8,6 @@ const firstBucket = new aws.s3.BucketV2("s3-pos-rocketseat-1", {
     }
 })
 
-const secondBucket = new aws.s3.BucketV2("s3-pos-rocketseat-2", {
-    bucket: "s3-pos-rocketseat-2",
-    tags: {
-        IAC: "true",
-    }
-})
-
 const ecr = new aws.ecr.Repository("ecr-pos-rockeseat", {
     name: "ecr-pos-rockeseat",
     imageTagMutability: 'IMMUTABLE',
@@ -27,10 +20,6 @@ const ecr = new aws.ecr.Repository("ecr-pos-rockeseat", {
 export const firstBucketArn = firstBucket.arn
 export const firstBucketName = firstBucket.id
 export const firstBucketRegion = firstBucket.region
-
-export const secondBucketArn = secondBucket.arn
-export const secondBucketName = secondBucket.id
-export const secondBucketRegion = secondBucket.region
 
 export const ecrName = ecr.name
 export const ectRepositoryUrl = ecr.repositoryUrl
