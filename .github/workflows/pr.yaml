@@ -44,6 +44,7 @@ jobs:
         with:
           command: preview
           stack-name: FTR-iac/stg
+          cloud-url: s3://ftr-pulumi-state-shandryll
         env:
           AWS-ACCESS-KEY-ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS-REGION: ${{ secrets.AWS_REGION }}
