@@ -46,6 +46,7 @@ jobs:
           stack-name: stg
           cloud-url: s3://ftr-pulumi-state-shandryll
         env:
+          PULUMI_CONFIG_PASSPHRASE: ''
           AWS-ACCESS-KEY-ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS-REGION: ${{ secrets.AWS_REGION }}
           AWS-SECRET-ACCESS-KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
