@@ -43,7 +43,7 @@ jobs:
         uses: pulumi/actions@v6
         with:
           command: preview
-          stack-name: shandryll/dev
+          stack-name: stg
         env:
           AWS-ACCESS-KEY-ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS-REGION: ${{ secrets.AWS_REGION }}
